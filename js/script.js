@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Adiciona o evento para iniciar a música de fundo
     document.addEventListener('keydown', startMusic);
 
     const princess = document.querySelector('.princess');
     const pipe = document.querySelector('.pipe');
+    const coin = document.querySelector('.coin');
 
     const jump = () => {
         princess.classList.add('jump');
@@ -38,12 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const loop = setInterval(() => {
-        console.log('loop');
-
         const pipePosition = pipe.offsetLeft;
         const princessPosition = +window.getComputedStyle(princess).bottom.replace('px', '');
 
-        console.log(princessPosition);
+     
+        coin.style.left = `${pipePosition + 10}px`; 
+        coin.style.top = `${parseInt(pipe.style.height) + 10}px`;
 
         if (pipePosition <= 120 && pipePosition > 0 && princessPosition < 100) {
             pipe.style.animation = 'none';
@@ -57,8 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             princess.style.marginLeft = '50px';
 
             clearInterval(loop);
-
-            playGameOverMusic(); // Chama a função para tocar a música de game over
+            playGameOverMusic();
         }
     }, 10);
 

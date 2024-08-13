@@ -36,6 +36,13 @@
   width: 550px;
   animation: clouds-animation 20s infinite linear;
 }
+.coin {
+    width: 40px; 
+    height: 40px; 
+    position: absolute; 
+    background-size: cover;
+    top: 410px;
+}
 
 @keyframes jump {
 
