@@ -97,16 +97,23 @@
 }
 @media (max-width: 480px) {
     .game-board {
-        width: 100vw; 
+        width: 100vw;
         height: 100vh;
-        border-bottom: 50px solid #1f580e;
-        object-fit: cover; 
+        border-bottom: 25px solid #1f580e;
+        object-fit: cover;
         display: block;
     }
     .coin {
         position: absolute;
-        bottom: 100px; 
+        bottom: 100px;
         left: 50%;
         transform: translateX(-50%);
+    }
+    .princess {
+        width: 80px;
+        bottom: 10px;
+    }
+    .pipe {
+        width: 40px;
     }
 }
