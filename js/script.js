@@ -22,13 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Erro ao tentar tocar a música de game over:', error);
         });
     };
-    
-        document.getElementById('start-button').addEventListener('click', () => {
+
+    document.getElementById('start-button').addEventListener('click', () => {
         startMusic();
         document.getElementById('start-button').style.display = 'none';
     });
-
-    document.addEventListener('keydown', startMusic);
 
     const princess = document.querySelector('.princess');
     const pipe = document.querySelector('.pipe');
@@ -42,15 +40,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     };
 
+    const resetCoin = () => {
+        coin.style.display = 'block'; 
+        coin.style.left = `${pipe.offsetLeft + 10}px`; 
+        coin.style.top = `${parseInt(pipe.style.height) + 10}px`;
+    };
+
     const loop = setInterval(() => {
         const pipePosition = pipe.offsetLeft;
         const princessPosition = +window.getComputedStyle(princess).bottom.replace('px', '');
+        const coinPosition = coin.offsetLeft;
+        const coinHeight = +window.getComputedStyle(coin).bottom.replace('px', '');
 
-     
+    
         coin.style.left = `${pipePosition + 10}px`; 
         coin.style.top = `${parseInt(pipe.style.height) + 10}px`;
 
-        if (pipePosition <= 120 && pipePosition > 0 && princessPosition < 100) {
+        if (coinPosition <= 120 && coinPosition > 0 && princessPosition >= coinHeight) {
+            coin.style.display = 'none'; // Faz a moeda desaparecer
+            console.log('Moeda coletada!');
+        }
+
+        if (pipePosition <= 90 && pipePosition > 0 && princessPosition < 100) {
             pipe.style.animation = 'none';
             pipe.style.left = `${pipePosition}px`;
 
@@ -64,8 +75,15 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(loop);
             playGameOverMusic();
         }
+
+        if (pipePosition <= 0) {
+            pipe.style.animation = '';
+            princess.style.animation = '';
+            resetCoin();
+        }
     }, 10);
 
     document.addEventListener('keydown', jump);
     document.addEventListener('touchstart', jump);
 });
+
