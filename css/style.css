@@ -81,3 +81,11 @@
     right: 100%;
   }
 }
+@media (max-width: 480px) {
+    .game-board {
+        height: 800px;
+        border-bottom: 50px solid #1f580e;
+        object-fit: cover; 
+        display: block;
+    }
+}
