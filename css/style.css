@@ -57,6 +57,7 @@
     border: none; 
     border-radius: 5px; 
     cursor: pointer; 
+    z-index: 1;
 }
 
 
@@ -97,17 +98,20 @@
         right: 100vw;
     }
 }
-
 @media (max-width: 480px) {
     .game-board {
         width: 100vw;
         height: 100vh;
         border-bottom: 25px solid #1f580e;
         object-fit: cover;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
     }
 
     .coin {
+        position: absolute;
         bottom: 100px;
         left: 50%;
         transform: translateX(-50%);
@@ -116,9 +120,23 @@
     .princess {
         width: 80px;
         bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .pipe {
         width: 40px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .clouds {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: clouds-animation 20s infinite linear;
     }
 }
