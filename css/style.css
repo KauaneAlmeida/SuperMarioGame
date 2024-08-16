@@ -102,11 +102,11 @@
     .game-board {
         width: 100vw;
         height: 100vh;
-        border-bottom: 25px solid #1f580e;
-        object-fit: cover;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        background: linear-gradient(#e8a5ee, #6c9acf);
         position: relative;
     }
 
@@ -119,6 +119,7 @@
 
     .princess {
         width: 80px;
+        position: absolute;
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
@@ -126,6 +127,7 @@
 
     .pipe {
         width: 40px;
+        position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -139,4 +141,3 @@
         transform: translateX(-50%);
         animation: clouds-animation 20s infinite linear;
     }
-}
