@@ -57,11 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
         coin.style.top = `${parseInt(pipe.style.height) + 10}px`;
 
         if (coinPosition <= 120 && coinPosition > 0 && princessPosition >= coinHeight) {
-            coin.style.display = 'none'; // Faz a moeda desaparecer
+            coin.style.display = 'none'; 
             console.log('Moeda coletada!');
         }
 
-        if (pipePosition <= 90 && pipePosition > 0 && princessPosition < 100) {
+        if (pipePosition <= 120 && pipePosition > 0 && princessPosition < 100) {
             pipe.style.animation = 'none';
             pipe.style.left = `${pipePosition}px`;
 
