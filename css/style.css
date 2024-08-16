@@ -24,7 +24,7 @@
 .princess {
     width: 120px;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
 }
 
 .jump {
@@ -60,7 +60,6 @@
     z-index: 1;
 }
 
-
 @keyframes jump {
     0% {
         bottom: 0;
@@ -79,25 +78,24 @@
     }
 }
 
-
 @keyframes clouds-animation {
     from {
         right: -550px;
     }
     to {
-        right: 100vw;
+        right: 100%;
     }
 }
-
 
 @keyframes pipe-animation {
     from {
         right: -60px;
     }
     to {
-        right: 100vw;
+        right: 100%;
     }
 }
+
 @media (max-width: 480px) {
     .game-board {
         width: 100vw;
@@ -141,3 +139,4 @@
         transform: translateX(-50%);
         animation: clouds-animation 20s infinite linear;
     }
+}
