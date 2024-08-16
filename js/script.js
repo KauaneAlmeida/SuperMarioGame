@@ -22,6 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Erro ao tentar tocar a música de game over:', error);
         });
     };
+    
+        document.getElementById('start-button').addEventListener('click', () => {
+        startMusic();
+        document.getElementById('start-button').style.display = 'none';
+    });
 
     document.addEventListener('keydown', startMusic);
 
@@ -62,4 +67,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 10);
 
     document.addEventListener('keydown', jump);
+    document.addEventListener('touchstart', jump);
 });
