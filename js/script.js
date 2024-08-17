@@ -87,3 +87,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('touchstart', jump);
 });
 
+
