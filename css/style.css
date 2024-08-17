@@ -98,35 +98,12 @@
 
 @media (max-width: 480px) {
     .game-board {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around; 
-        align-items: center;
-        background: linear-gradient(#e8a5ee, #6c9acf);
-        position: relative;
-    }
+     height: 400px; 
+     border-bottom: 50px solid #1f580e;
+  }
+ }
+    
 
-    .coin {
-        width: 40px;
-        height: 40px;
-    }
 
-    .princess {
-        width: 80px;
-    }
 
-    .pipe {
-        width: 40px;
-    }
-
-    .clouds {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        animation: clouds-animation 20s infinite linear;
-    }
-}
 
