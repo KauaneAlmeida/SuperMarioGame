@@ -98,10 +98,18 @@
 
 @media (max-width: 480px) {
     .game-board {
-     height: 400px; 
-     border-bottom: 50px solid #1f580e;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; /* Distribui os elementos verticalmente */
+        align-items: center;
+        background: linear-gradient(#e8a5ee, #6c9acf);
+        position: relative;
+    }
+
   }
- }
+ 
     
 
 
