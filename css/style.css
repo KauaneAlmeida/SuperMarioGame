@@ -100,9 +100,16 @@
 @media (max-width: 480px) {
     .game-board {
         height: 600px;
-        border-bottom: 40px solid #1f580e;
         object-fit: cover; 
         display: flex;
+        position: relative;
+    }
+    .border-bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 90px; 
+        background-color: #1f580e;
     }
 }
 
