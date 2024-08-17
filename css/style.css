@@ -18,13 +18,13 @@
     position: absolute;
     bottom: 0;
     width: 60px;
-    animation: pipe-animation 5s infinite linear;
+    right: -60px; 
 }
 
 .princess {
     width: 120px;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
 }
 
 .jump {
@@ -43,6 +43,7 @@
     position: absolute; 
     background-size: cover;
     top: 410px;
+    left: -40px; 
 }
 
 #start-button {
@@ -98,12 +99,13 @@
 
 @media (max-width: 480px) {
     .game-board {
-        height: 800px;
-        border-bottom: 50px solid #1f580e;
+        height: 600px;
+        border-bottom: 40px solid #1f580e;
         object-fit: cover; 
         display: flex;
     }
 }
+
     
 
 
