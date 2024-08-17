@@ -97,6 +97,8 @@
 }
 
 
+css
+Copiar código
 @media (max-width: 480px) {
     .game-board {
         width: 80vw;
@@ -109,16 +111,13 @@
         position: relative;
     }
 
-    .pipe {
-        width: 40px;
+    .coin {
+        width: 10vw;
+        height: 10vw;
     }
 
-    .clouds {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        animation: clouds-animation 20s infinite linear;
+    .princess {
+        width: 20vw;
     }
 }
  
