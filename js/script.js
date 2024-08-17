@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         coin.style.left = `${pipePosition + 10}px`; 
         coin.style.top = `${parseInt(pipe.style.height) + 10}px`;
 
-        if (coinPosition <= 120 && coinPosition > 0 && princessPosition >= coinHeight) {
+        if (coinPosition <= 90 && coinPosition > 0 && princessPosition >= coinHeight) {
             coin.style.display = 'none'; 
             console.log('Moeda coletada!');
         }
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             princess.style.animation = '';
             resetCoin();
         }
-    }, 20);
+    }, 10);
 
     document.addEventListener('keydown', jump);
     document.addEventListener('touchstart', jump);
