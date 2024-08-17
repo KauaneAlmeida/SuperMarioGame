@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             princess.style.animation = '';
             resetCoin();
         }
-    }, 10);
+    }, 50);
 
     document.addEventListener('keydown', jump);
     document.addEventListener('touchstart', jump);
