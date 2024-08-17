@@ -99,7 +99,7 @@
 
 @media (max-width: 480px) {
     .game-board {
-        height: 90vh; 
+        height: 70vh; 
         display: flex;
         position: relative;
     }
