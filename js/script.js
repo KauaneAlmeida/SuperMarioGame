@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Moeda coletada!');
         }
 
-        if (pipePosition <= 120 && pipePosition > 0 && princessPosition < 100) {
+        if (pipePosition <= 100 && pipePosition > 0 && princessPosition < 100) {
             pipe.style.animation = 'none';
             pipe.style.left = `${pipePosition}px`;
 
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             princess.style.animation = '';
             resetCoin();
         }
-    }, 10);
+    }, 20);
 
     document.addEventListener('keydown', jump);
     document.addEventListener('touchstart', jump);
