@@ -60,7 +60,7 @@ html, body {
 
 .finish-line {
     position: absolute;
-    width: 280vh;
+    width: 300vh;
     height: auto;
     object-fit: contain;
 }
@@ -119,7 +119,7 @@ html, body {
 
 @media (max-width > 480px) {
     .game-board {
-        height: 600px;
+        height: 400px;
         object-fit: cover; 
         display: flex;
         position: relative;
@@ -142,7 +142,7 @@ html, body {
 }
     @media (min-width > 760px) {
         .game-board {
-            height: 600px;
+            height: 400px;
             object-fit: cover; 
             display: flex;
             position: relative;
