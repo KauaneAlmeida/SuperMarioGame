@@ -119,8 +119,8 @@ html, body {
 
 @media (max-width: 480px) {
     .game-board {
-        height: 85vh;
-        border-bottom: 40px solid #1f580e;
+        height: 90vh;
+        border-bottom: 25px solid #1f580e;
         object-fit: cover; 
         display: flex;
         position: relative;
