@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameStarted = false;
     let gameLoop; 
 
+    pipe.style.display = 'none';
+
     const startMusic = () => {
         if (!musicStarted) {
             backgroundMusic.play().then(() => {
@@ -49,10 +51,18 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('start-button').style.display = 'none';
 
       
-        pipe.style.animation = 'pipe-animation 1.5s infinite linear';
-        coin.style.animation = 'coin-animation 1.5s infinite linear';
+        pipe.style.display = 'block';
+        
+    
+        const screenWidth = window.innerWidth;
+        if (screenWidth <= 480) {
+            pipe.style.animation = 'pipe-animation 1s infinite linear'; 
+        } else {
+            pipe.style.animation = 'pipe-animation 3s infinite linear'; 
+        }
+        
+        coin.style.animation = 'coin-animation 3s infinite linear';
 
-     
         gameLoop = setInterval(() => {
             const pipePosition = pipe.offsetLeft;
             const princessPosition = +window.getComputedStyle(princess).bottom.replace('px', '');
@@ -92,3 +102,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', jump);
     document.addEventListener('touchstart', jump);
 });
+
