@@ -13,7 +13,7 @@ html, body {
 .game-board {
     width: 100%;
     height: 600px;
-    border-bottom: 40px solid #1f580e;
+    border-bottom: 50px solid #1f580e;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -60,7 +60,7 @@ html, body {
 
 .finish-line {
     position: absolute;
-    width: 250vh;
+    width: 240vh;
     height: auto;
     object-fit: contain;
 }
