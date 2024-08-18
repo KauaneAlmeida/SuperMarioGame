@@ -60,7 +60,7 @@ html, body {
 
 .finish-line {
     position: absolute;
-    width: 230vh;
+    width: 280vh;
     height: auto;
     object-fit: contain;
 }
