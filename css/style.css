@@ -131,16 +131,8 @@ html, body {
         height: 40px; 
         background-color: #1f580e;
     }
-
-   
-    .content {
-        position: absolute;
-        bottom: 40px;
-        width: 100%;
-        height: calc(100% - 40px); 
-    }
 }
-    @media (min-width > 760px) {
+    @media (max-width > 760px) {
         .game-board {
             height: 400px;
             object-fit: cover; 
@@ -155,12 +147,7 @@ html, body {
             height: 40px; 
             background-color: #1f580e;
         }
-        .content {
-            position: absolute;
-            bottom: 40px;
-            width: 100%;
-            height: calc(100% - 40px); 
-        }
+      
 }
 
 
