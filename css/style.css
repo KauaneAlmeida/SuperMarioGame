@@ -65,8 +65,6 @@ html, body {
   
 }
 
-
-
 #start-button {
     position: absolute;
     top: 50%;
@@ -122,7 +120,7 @@ html, body {
 @media (max-width: 480px) {
     .game-board {
         height: 80vh;
-        border-bottom: 25px solid #1f580e;
+        border-bottom: 40px solid #1f580e;
         object-fit: cover; 
         display: flex;
         position: relative;
