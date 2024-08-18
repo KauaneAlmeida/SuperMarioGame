@@ -4,13 +4,20 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+}
+
 .game-board {
     width: 100%;
     height: 600px;
-    border-bottom: 25px solid #1f580e;
+    border-bottom: 40px solid #1f580e;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    height: calc(106vh - 40px);
     background: linear-gradient(#e8a5ee, #6c9acf);
 }
 
@@ -19,12 +26,15 @@
     bottom: 0;
     width: 60px;
     right: -60px; 
+    z-index: 1;
+    transition: none;
 }
 
 .princess {
     width: 120px;
     position: absolute;
     bottom: 0px;
+    z-index: 1;
 }
 
 .jump {
@@ -35,6 +45,7 @@
     position: absolute;
     width: 550px;
     animation: clouds-animation 20s infinite linear;
+    z-index: 1;
 }
 
 .coin {
@@ -44,6 +55,7 @@
     background-size: cover;
     top: 410px;
     left: -40px; 
+    z-index: 1;
 }
 
 #start-button {
@@ -61,6 +73,7 @@
     z-index: 1;
 }
 
+
 @keyframes jump {
     0% {
         bottom: 0;
@@ -77,6 +90,13 @@
     100% {
         bottom: 0;
     }
+}
+
+.finish-line {
+    position: absolute;
+    width: 213vh;
+    height: auto;
+    object-fit: contain;
 }
 
 @keyframes clouds-animation {
@@ -112,6 +132,7 @@
         background-color: #1f580e;
     }
 
+   
     .content {
         position: absolute;
         bottom: 40px;
@@ -119,13 +140,14 @@
         height: calc(100% - 40px); 
     }
 }
-    @media (max-width > 760px) {
+    @media (min-width > 760px) {
         .game-board {
             height: 600px;
             object-fit: cover; 
             display: flex;
             position: relative;
         }
+      
         .border-bottom {
             position: absolute;
             bottom: 0;
