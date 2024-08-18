@@ -121,21 +121,12 @@ html, body {
 
 @media (max-width: 480px) {
     .game-board {
-        height: 90vh;
+        height: 80vh;
         border-bottom: 50px solid #1f580e;
         object-fit: cover; 
         display: flex;
         position: relative;
     }
-}
-    @media (max-width: 760px) {
-        .game-board {
-            height: 90vh;
-            border-bottom: 50px solid #1f580e;
-            object-fit: cover; 
-            display: flex;
-            position: relative;
-        }
 }
 
 
