@@ -12,12 +12,11 @@ html, body {
 
 .game-board {
     width: 100%;
-    height: 600px;
-    border-bottom: 50px solid #1f580e;
+    height: 100vh;
+    border-bottom: 25px solid #1f580e;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    height: calc(106vh - 40px);
     background: linear-gradient(#e8a5ee, #6c9acf);
 }
 
@@ -27,7 +26,6 @@ html, body {
     width: 60px;
     right: -60px; 
     z-index: 1;
-    transition: none;
 }
 
 .princess {
@@ -53,17 +51,21 @@ html, body {
     height: 40px; 
     position: absolute; 
     background-size: cover;
-    top: 410px;
+    top: 75%;
     left: -40px; 
     z-index: 1;
 }
 
 .finish-line {
     position: absolute;
-    width: 240vh;
+    width: 213h;
     height: auto;
+    right: -60px; 
     object-fit: contain;
+  
 }
+
+
 
 #start-button {
     position: absolute;
@@ -119,35 +121,21 @@ html, body {
 
 @media (max-width > 480px) {
     .game-board {
-        height: 400px;
+        height: 100vh;
+        border-bottom: 50px solid #1f580e;
         object-fit: cover; 
         display: flex;
         position: relative;
     }
-    .border-bottom {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 40px; 
-        background-color: #1f580e;
-    }
 }
     @media (max-width > 760px) {
         .game-board {
-            height: 400px;
+            height: 100vh;
+            border-bottom: 50px solid #1f580e;
             object-fit: cover; 
             display: flex;
             position: relative;
         }
-      
-        .border-bottom {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 40px; 
-            background-color: #1f580e;
-        }
-      
 }
 
 
