@@ -119,18 +119,18 @@ html, body {
     }
 }
 
-@media (max-width > 480px) {
+@media (max-width: 480px) {
     .game-board {
-        height: 80vh;
+        height: 100vh;
         border-bottom: 50px solid #1f580e;
         object-fit: cover; 
         display: flex;
         position: relative;
     }
 }
-    @media (max-width > 760px) {
+    @media (max-width: 760px) {
         .game-board {
-            height: 80vh;
+            height: 100vh;
             border-bottom: 50px solid #1f580e;
             object-fit: cover; 
             display: flex;
