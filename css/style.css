@@ -58,6 +58,13 @@ html, body {
     z-index: 1;
 }
 
+.finish-line {
+    position: absolute;
+    width: 230vh;
+    height: auto;
+    object-fit: contain;
+}
+
 #start-button {
     position: absolute;
     top: 50%;
@@ -90,13 +97,6 @@ html, body {
     100% {
         bottom: 0;
     }
-}
-
-.finish-line {
-    position: absolute;
-    width: 213vh;
-    height: auto;
-    object-fit: contain;
 }
 
 @keyframes clouds-animation {
